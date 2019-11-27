@@ -20,13 +20,10 @@ use PMVersions::Util qw(version_from_pmversions);
 
 with (
     'Dist::Zilla::Role::RequireFromBuild',
-    'Dist::Zilla::Role::BeforeBuild',
-    'Dist::Zilla::Role::FileGatherer',
     'Dist::Zilla::Role::FileMunger',
     'Dist::Zilla::Role::FileFinderUser' => {
         default_finders => [':InstallModules'],
     },
-    'Dist::Zilla::Role::PrereqSource',
 );
 
 sub _get_meta {
